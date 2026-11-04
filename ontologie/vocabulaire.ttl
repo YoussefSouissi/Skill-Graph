@@ -1,4 +1,4 @@
-# Vocabulaire RDFS de SkillGraph TN (contrat 1 de PLAN.md)
+# Vocabulaire RDFS de SkillGraph TN
 # 15 classes, 9 propriétés à nous + 3 propriétés réutilisées (dcterms:title, foaf:name, schema:url)
 
 @prefix sg:      <http://skillgraph-tn.org/vocab#> .

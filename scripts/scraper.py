@@ -1,4 +1,4 @@
-"""Collecte des offres tech de Keejob et Tanitjobs avec ScrapeGraphAI (contrat 2 de PLAN.md).
+"""Collecte des offres tech de Keejob et Tanitjobs avec ScrapeGraphAI.
 
 Commande : python scripts/scraper.py
 Sortie   : donnees/brut/offres.csv (une ligne par offre)
@@ -111,7 +111,7 @@ def texte_offre(id_offre: str, url: str) -> str:
 
 
 def extraire_offre(texte: str, slugs: list[str]) -> dict:
-    """ScrapeGraphAI lit le texte de l'offre et remplit les colonnes du contrat 2."""
+    """ScrapeGraphAI lit le texte de l'offre et remplit les colonnes du CSV."""
     prompt = (
         "Extrais les informations de cette offre d'emploi. "
         "type_contrat : le premier type de contrat cité. "
@@ -165,7 +165,7 @@ def est_doublon(ligne: dict, vues: list[tuple[str, str]]) -> bool:
 
 
 def nettoyer(brut: dict, id_offre: str, url: str, texte: str, citees: list[str]) -> dict:
-    """Met les valeurs au format du contrat 2.
+    """Met les valeurs au format du CSV.
 
     Compétences : toutes celles citées dans le texte (citees) ; le modèle dit seulement lesquelles sont souhaitées.
     """

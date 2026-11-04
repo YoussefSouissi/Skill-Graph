@@ -1,4 +1,4 @@
-"""Moteur d'inférence : applique nos règles SPARQL (inference/regles/) au graphe (contrat 3 de PLAN.md).
+"""Moteur d'inférence : applique nos règles SPARQL (inference/regles/) au graphe.
 
 Utilisation : from inference.inferer import appliquer_inference
 """

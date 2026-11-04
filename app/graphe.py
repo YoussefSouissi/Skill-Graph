@@ -1,4 +1,4 @@
-"""Chargement du graphe pour le web service (contrat 3 de PLAN.md)."""
+"""Chargement du graphe pour le web service."""
 
 from pathlib import Path
 

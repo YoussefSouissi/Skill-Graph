@@ -1,4 +1,4 @@
-# Profils des candidats (contrat 1 de PLAN.md), écrits à la main.
+# Profils des candidats, écrits à la main.
 # Compétences prises uniquement dans donnees/competences.csv.
 # Utilisés par la requête Q5 et l'endpoint /candidats/{id}/correspondances.
 

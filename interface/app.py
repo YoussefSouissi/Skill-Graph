@@ -1,7 +1,7 @@
 """Interface SkillGraph TN : appelle les endpoints du web service et affiche les réponses (au lieu de Postman).
 
 Commande : streamlit run interface/app.py   (le web service doit tourner : uvicorn app.main:app)
-Contrat suivi : réponses {"inference", "nombre", "resultats"}, paramètre inference=true|false.
+Format des réponses : {"inference", "nombre", "resultats"}, paramètre inference=true|false.
 """
 
 import csv

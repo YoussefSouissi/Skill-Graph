@@ -1,4 +1,4 @@
-"""Conversion des offres CSV en triplets RDF (contrat 1 de PLAN.md).
+"""Conversion des offres CSV en triplets RDF.
 
 Commande : python scripts/csv_vers_rdf.py
 Entrées  : donnees/brut/offres.csv, donnees/competences.csv, donnees/entreprises.csv
@@ -33,7 +33,7 @@ def slug(texte: str) -> str:
 
 
 def detecter_type(type_contrat: str):
-    """La classe la plus précise (règle 1 du contrat 1) : jamais sg:Offre."""
+    """La classe la plus précise : jamais sg:Offre (l'inférence ajoute le reste)."""
     return TYPES[type_contrat]
 
 
