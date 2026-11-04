@@ -1,101 +1,218 @@
 # SkillGraph TN
 
-A knowledge graph of the tech job market in Tunisia. Job and internship offers are linked to their company, city and required skills, described with an RDFS vocabulary, enriched by inference rules, queried with SPARQL and exposed through a REST web service that returns JSON.
+**A knowledge graph of the tech job market in Tunisia.**
 
-## The problem
+SkillGraph TN links tech job and internship offers to their company, city and required skills. The data is described with an RDFS vocabulary, enriched by inference rules, queried with SPARQL, and exposed through a REST web service that returns JSON.
 
-Tech job offers in Tunisia are spread across many websites, each with its own list of required skills. A student cannot easily see which offers match their profile, which skills they are missing, or which skills the market asks for most.
+## Table of contents
 
-## How it works
+1. [Overview](#overview)
+2. [Architecture](#architecture)
+3. [Data](#data)
+4. [Vocabulary](#vocabulary)
+5. [Inference](#inference)
+6. [SPARQL queries](#sparql-queries)
+7. [REST API](#rest-api)
+8. [Getting started](#getting-started)
+9. [Project structure](#project-structure)
+10. [Tech stack](#tech-stack)
 
-1. **Data**: 50 real offers collected from Keejob and Tanitjobs with ScrapeGraphAI and a local LLM (Qwen 2.5 via Ollama). The offers cover 32 skills.
-2. **Vocabulary** (`ontologie/vocabulaire.ttl`): 15 classes and 9 properties, with class and property hierarchies, `rdfs:domain` / `rdfs:range`, and reused vocabularies (FOAF, schema.org, Dublin Core).
-3. **RDF conversion** (`scripts/csv_vers_rdf.py`): the CSV is turned into Turtle (`donnees/offres.ttl`). Each offer stores only its most precise type (e.g. `sg:StagePFE`) and its specific skill links (`sg:competenceRequise`, `sg:competenceSouhaitee`).
-4. **Inference** (`inference/`): two RDFS rules written as SPARQL `CONSTRUCT` queries are applied in a loop until nothing new is produced:
-   - **R1, subclass** (rdfs9 / rdfs11): an `sg:StagePFE` is also an `sg:Stage`, an `sg:Offre` and a `schema:JobPosting`;
-   - **R2, subproperty** (rdfs7): an offer that *requires* Python also *demands* Python (`sg:exigeCompetence`).
-5. **SPARQL queries** (`requetes/`): six queries, from simple counts to filters, `NOT EXISTS`, `HAVING` and profile matching.
-6. **Web service** (`app/`): FastAPI, with one endpoint per query and an `inference=true|false` parameter on every endpoint.
-7. **Interface** (`interface/`): a Streamlit client of the web service.
+---
+
+## Overview
+
+**The problem.** Tech job offers in Tunisia are spread across many websites, each with its own list of required skills. A student cannot easily see:
+- which offers match their profile;
+- which skills they are missing;
+- which skills the market asks for most.
+
+**The solution.** A knowledge graph in which every offer is connected to its company, city and skills. Questions like these get an immediate answer:
+- *Which internships in Tunis ask for Python?*
+- *Which skills are most in demand?*
+- *How well does my profile match each offer?*
+
+---
+
+## Architecture
+
+```
+Job websites ──► Scraping (LLM) ──► CSV ──► RDF conversion ──► Turtle graph
+                                                                   │
+                                          RDFS vocabulary ─────────┤
+                                                                   ▼
+                                                     Inference (R1, R2)
+                                                                   │
+                                                                   ▼
+                              Streamlit UI ◄── FastAPI (JSON) ◄── SPARQL queries
+```
+
+| Step | Component | Output |
+|---|---|---|
+| 1. Collect | `scripts/scraper.py` | `donnees/brut/offres.csv` |
+| 2. Model | `ontologie/vocabulaire.ttl` | RDFS vocabulary |
+| 3. Convert | `scripts/csv_vers_rdf.py` | `donnees/offres.ttl` |
+| 4. Infer | `inference/inferer.py` | inferred triples |
+| 5. Query | `requetes/*.rq` | SPARQL results |
+| 6. Serve | `app/main.py` | JSON endpoints |
+| 7. Explore | `interface/app.py` | web interface |
+
+---
+
+## Data
+
+| | |
+|---|---|
+| Sources | Keejob, Tanitjobs |
+| Collection tool | ScrapeGraphAI with a local LLM (Qwen 2.5 via Ollama) |
+| Offers | 50 |
+| Skills | 32 |
+| Graph size | 849 triples, or 1208 after inference |
+
+The LLM reads each offer and extracts its title, company, city, contract type and skills. Each offer is then written as RDF triples, for example:
+
+```turtle
+sgd:offre-kj-249246 a sg:StagePFE ;
+    sg:situeeA sgd:ville-tunis ;
+    sg:competenceRequise sgd:competence-python .
+```
+
+---
+
+## Vocabulary
+
+`ontologie/vocabulaire.ttl` defines **15 classes** and **9 properties**.
+
+| Feature | Example |
+|---|---|
+| Class hierarchy (`rdfs:subClassOf`) | `sg:StagePFE` ⊂ `sg:Stage` ⊂ `sg:Offre` ⊂ `schema:JobPosting` |
+| Property hierarchy (`rdfs:subPropertyOf`) | `sg:competenceRequise` and `sg:competenceSouhaitee` ⊂ `sg:exigeCompetence` |
+| Domain and range | `sg:situeeA` links an `sg:Offre` to an `sg:Ville` |
+| Reused vocabularies | FOAF (`foaf:Organization`, `foaf:Person`, `foaf:name`), schema.org (`schema:JobPosting`, `schema:Place`), Dublin Core (`dcterms:title`) |
 
 ![Vocabulary schema](ontologie/Screenshot%202026-10-30%20at%2000.12.02.png)
 
-## Results: with and without inference
+---
 
-Generated by `python scripts/comparer_inference.py` (full table in `resultats/comparaison_inference.md`; inferred triples in `resultats/triplets_inferes.ttl`).
+## Inference
 
-| Question | Without inference | With inference | Rule |
+Only the most precise information is stored. Two RDFS rules, written as SPARQL `CONSTRUCT` queries in `inference/regles/`, derive the rest. They are applied in a loop until no new triple appears.
+
+| Rule | Principle | Stored | Inferred |
 |---|---|---|---|
-| Number of offers (`?offre a sg:Offre`) | 0 | 50 | R1 |
-| Offers that demand Python (`sg:exigeCompetence`) | 0 | 20 | R2 |
+| **R1, subclass** (rdfs9, rdfs11) | A member of a class is also a member of its parent classes | offer is an `sg:StagePFE` | it is also an `sg:Stage`, `sg:Offre`, `schema:JobPosting` |
+| **R2, subproperty** (rdfs7) | A specific link implies the general link | offer `sg:competenceRequise` Python | offer `sg:exigeCompetence` Python |
+
+**With and without inference** (generated by `scripts/comparer_inference.py`):
+
+| Question | Without | With | Rule |
+|---|---|---|---|
+| Number of offers | 0 | 50 | R1 |
+| Offers that demand Python | 0 | 20 | R2 |
 | Top skills | no result | SQL (22), Python (20), Git (17), JavaScript (14), Linux (13) | R2 |
 
-The graph grows from 849 to 1208 triples: 359 triples are inferred.
+**359 triples** are inferred. They are listed in `resultats/triplets_inferes.ttl`, and the full comparison is in `resultats/comparaison_inference.md`.
+
+---
 
 ## SPARQL queries
 
-| File | Question | SPARQL features |
-|---|---|---|
-| `q0_nombre_offres.rq` | How many offers? | `COUNT` |
-| `q1_top_competences.rq` | Most requested skills | `GROUP BY`, `COUNT`, `ORDER BY` |
-| `q2_offres_par_ville_competence_type.rq` | Offers by city, skill and type | optional parameters bound with `initBindings` |
-| `q3_offres_avec_sans_competence.rq` | Offers that demand one skill but not another | `FILTER NOT EXISTS` |
-| `q4_entreprises_plusieurs_offres.rq` | Companies publishing several offers | `HAVING`, `GROUP_CONCAT` |
-| `q5_correspondance_candidat.rq` | How well a candidate matches each offer | `OPTIONAL`, `COUNT DISTINCT` |
+| # | File | Question | SPARQL features |
+|---|---|---|---|
+| Q0 | `q0_nombre_offres.rq` | How many offers? | `COUNT` |
+| Q1 | `q1_top_competences.rq` | Most requested skills | `GROUP BY`, `COUNT`, `ORDER BY` |
+| Q2 | `q2_offres_par_ville_competence_type.rq` | Offers by city, skill and type | optional parameters |
+| Q3 | `q3_offres_avec_sans_competence.rq` | Offers demanding one skill but not another | `FILTER NOT EXISTS` |
+| Q4 | `q4_entreprises_plusieurs_offres.rq` | Companies publishing several offers | `HAVING`, `GROUP_CONCAT` |
+| Q5 | `q5_correspondance_candidat.rq` | How well a candidate matches each offer | `OPTIONAL`, `COUNT DISTINCT` |
 
-Parameters are always bound with `initBindings`, never pasted into the query text, which prevents SPARQL injection.
+Parameters are bound with `initBindings`, never inserted into the query text, which prevents SPARQL injection.
+
+---
+
+## REST API
+
+Every endpoint accepts `inference=true|false` (default `true`). Every response has the same shape:
+
+```json
+{ "inference": true, "nombre": 3, "resultats": [ ... ] }
+```
+
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/offres?ville=tunis&competence=python&type=pfe` | Offers filtered by city, skill and type (`pfe`, `stage`, `emploi`) |
+| GET | `/offres/avec-sans?avec=python&sans=sql` | Offers that demand one skill but not another |
+| GET | `/competences/top?limite=10` | Most requested skills (`limite` from 1 to 100) |
+| GET | `/candidats/{id}/correspondances` | Offers ranked by match score for a candidate |
+| GET | `/entreprises/actives` | Companies publishing several offers |
+| GET | `/statistiques/inference` | What inference adds to the graph |
+
+**Error handling**
+
+| Code | When |
+|---|---|
+| `422` | Invalid parameter (e.g. `limite=0`, unknown `type`) |
+| `404` | Unknown candidate |
+
+Interactive documentation: `http://127.0.0.1:8000/docs`.
+
+---
 
 ## Getting started
 
+**1. Install**
+
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
-
-python scripts/csv_vers_rdf.py          # CSV -> donnees/offres.ttl
-python scripts/comparer_inference.py    # inference + comparison -> resultats/
-python scripts/lancer_requete.py requetes/q1_top_competences.rq --inference
-
-uvicorn app.main:app --reload           # API docs: http://127.0.0.1:8000/docs
-streamlit run interface/app.py          # optional interface (the API must be running)
 ```
 
-`scripts/scraper.py` re-collects the offers. It needs Ollama running with `qwen2.5:7b`.
+**2. Build the graph and run the inference**
 
-## API
+```bash
+python scripts/csv_vers_rdf.py          # CSV -> donnees/offres.ttl
+python scripts/comparer_inference.py    # inference + comparison -> resultats/
+```
 
-Every response has the form `{"inference": true, "nombre": N, "resultats": [...]}`.
+**3. Run a query**
 
-| Endpoint | Description |
-|---|---|
-| `GET /offres?ville=tunis&competence=python&type=pfe` | Offers filtered by city, skill and type (`pfe`, `stage`, `emploi`) |
-| `GET /offres/avec-sans?avec=python&sans=sql` | Offers that demand one skill but not another |
-| `GET /competences/top?limite=10` | Most requested skills (`limite` between 1 and 100) |
-| `GET /candidats/{id}/correspondances` | Offers ranked by match score for a candidate profile |
-| `GET /entreprises/actives` | Companies publishing several offers |
-| `GET /statistiques/inference` | What inference adds (offer count, triple count) |
+```bash
+python scripts/lancer_requete.py requetes/q1_top_competences.rq --inference
+```
 
-Invalid parameters return a `422` error with details. An unknown candidate returns a `404` error.
+**4. Start the web service and the interface**
+
+```bash
+uvicorn app.main:app --reload           # http://127.0.0.1:8000/docs
+streamlit run interface/app.py          # needs the web service running
+```
+
+To collect the offers again, run `python scripts/scraper.py`. Ollama must be running with the `qwen2.5:7b` model.
+
+---
 
 ## Project structure
 
 ```
-ontologie/    RDFS vocabulary and its schema
-donnees/      raw CSV, skills and companies dictionaries, offers and candidates in Turtle
-scripts/      scraping, CSV -> RDF conversion, inference comparison, query runner
-inference/    inference rules (SPARQL CONSTRUCT) and the loop that applies them
-requetes/     the six SPARQL queries
-app/          FastAPI web service
-interface/    Streamlit client
-resultats/    inferred triples and the with / without comparison
+├── ontologie/      RDFS vocabulary and its schema
+├── donnees/        raw CSV, skill and company lists, offers and candidates in Turtle
+├── scripts/        scraping, CSV → RDF conversion, inference comparison, query runner
+├── inference/      inference rules (SPARQL CONSTRUCT) and the engine that applies them
+├── requetes/       the six SPARQL queries
+├── app/            FastAPI web service
+├── interface/      Streamlit interface
+└── resultats/      inferred triples and the with / without comparison
 ```
 
-## Limitations
-
-- 50 offers only, collected at one point in time from two websites.
-- Skills are extracted by an LLM and checked by hand on a sample only.
-- Company sectors are known for a few companies only.
-- The graph is loaded in memory from Turtle files; there is no triple store.
+---
 
 ## Tech stack
 
-Python, rdflib, FastAPI, Uvicorn, Streamlit, ScrapeGraphAI.
+| Area | Tools |
+|---|---|
+| Semantic Web | RDF, Turtle, RDFS, SPARQL |
+| Language | Python |
+| Graph | rdflib |
+| Web service | FastAPI, Uvicorn |
+| Interface | Streamlit |
+| Data collection | ScrapeGraphAI, Ollama (Qwen 2.5) |
