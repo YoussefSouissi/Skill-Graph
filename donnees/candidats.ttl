@@ -1,0 +1,36 @@
+# Profils des candidats (contrat 1 de PLAN.md), écrits à la main.
+# Compétences prises uniquement dans donnees/competences.csv.
+# Utilisés par la requête Q5 et l'endpoint /candidats/{id}/correspondances.
+
+@prefix sg:   <http://skillgraph-tn.org/vocab#> .
+@prefix sgd:  <http://skillgraph-tn.org/donnees/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sgd:candidat-youssef a sg:Candidat ;
+    foaf:name "Youssef" ;
+    sg:possedeCompetence sgd:competence-sql, sgd:competence-python, sgd:competence-csharp,
+        sgd:competence-javascript, sgd:competence-typescript, sgd:competence-pytorch,
+        sgd:competence-oracle, sgd:competence-docker, sgd:competence-linux .
+
+sgd:candidat-maissa a sg:Candidat ;
+    foaf:name "Maissa" ;
+    sg:possedeCompetence sgd:competence-java, sgd:competence-spring, sgd:competence-javascript,
+        sgd:competence-react, sgd:competence-mysql, sgd:competence-git .
+
+sgd:candidat-mohamed-amine a sg:Candidat ;
+    foaf:name "Mohamed Amine" ;
+    sg:possedeCompetence sgd:competence-php, sgd:competence-laravel, sgd:competence-mysql,
+        sgd:competence-angular, sgd:competence-azure, sgd:competence-kubernetes .
+
+# Ajouté depuis l'interface
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix sg: <http://skillgraph-tn.org/vocab#> .
+@prefix sgd: <http://skillgraph-tn.org/donnees/> .
+
+sgd:candidat-yasmine a sg:Candidat ;
+    sg:possedeCompetence sgd:competence-cpp,
+        sgd:competence-csharp,
+        sgd:competence-javascript,
+        sgd:competence-typescript ;
+    foaf:name "yasmine" .
+

@@ -1,0 +1,15 @@
+# Q3 · Offres qui exigent une compétence ?avec mais PAS la compétence ?sans
+# Utilité : l'étudiant cherche des offres accessibles (« Python, mais sans SQL que je ne connais pas »).
+# Paramètres (initBindings), les DEUX obligatoires : ?avec, ?sans, ex. sgd:competence-python et sgd:competence-sql
+# (si ?sans est vide, toute offre a « une » compétence : le NOT EXISTS élimine tout, 0 résultat)
+# Avec inférence : compétences requises et souhaitées (R2). Sans inférence : aucun résultat.
+PREFIX sg:      <http://skillgraph-tn.org/vocab#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+SELECT DISTINCT ?offre ?titre
+WHERE {
+    ?offre sg:exigeCompetence ?avec ;
+           dcterms:title ?titre .
+    FILTER NOT EXISTS { ?offre sg:exigeCompetence ?sans . }
+}
+ORDER BY ?titre

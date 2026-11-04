@@ -1,0 +1,20 @@
+# Q4 · Entreprises qui publient plusieurs offres (les recruteurs les plus actifs)
+# Utilité : l'étudiant voit quelles entreprises recrutent le plus, et dans quelles villes.
+# Pour chaque entreprise : nombre d'offres et villes ; HAVING garde celles qui ont plus d'une offre.
+# (Remplace « entreprises dans plusieurs villes » : dans nos 50 offres, aucune entreprise n'a plus d'une ville.)
+# Même résultat avec et sans inférence (sg:publieePar et sg:situeeA sont écrits dans les données).
+# Endpoint : /entreprises/actives
+PREFIX sg:   <http://skillgraph-tn.org/vocab#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?entreprise ?nom (COUNT(DISTINCT ?offre) AS ?nbOffres)
+       (GROUP_CONCAT(DISTINCT ?nomVille; separator=", ") AS ?villes)
+WHERE {
+    ?offre sg:publieePar ?entreprise ;
+           sg:situeeA ?ville .
+    ?entreprise foaf:name ?nom .
+    ?ville foaf:name ?nomVille .
+}
+GROUP BY ?entreprise ?nom
+HAVING (COUNT(DISTINCT ?offre) > 1)
+ORDER BY DESC(?nbOffres) ?nom

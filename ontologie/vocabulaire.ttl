@@ -1,0 +1,168 @@
+# Vocabulaire RDFS de SkillGraph TN (contrat 1 de PLAN.md)
+# 15 classes, 9 propriétés à nous + 3 propriétés réutilisées (dcterms:title, foaf:name, schema:url)
+
+@prefix sg:      <http://skillgraph-tn.org/vocab#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix schema:  <https://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+# ---------------------------------------------------------------------------
+# Classes : les offres
+# ---------------------------------------------------------------------------
+
+sg:Offre a rdfs:Class ;
+    rdfs:subClassOf schema:JobPosting ;
+    rdfs:label "Offre"@fr ;
+    rdfs:comment "Une offre d'emploi ou de stage publiée par une entreprise."@fr .
+
+sg:Stage a rdfs:Class ;
+    rdfs:subClassOf sg:Offre ;
+    rdfs:label "Stage"@fr ;
+    rdfs:comment "Une offre de stage."@fr .
+
+sg:StagePFE a rdfs:Class ;
+    rdfs:subClassOf sg:Stage ;
+    rdfs:label "Stage PFE"@fr ;
+    rdfs:comment "Un stage de projet de fin d'études."@fr .
+
+sg:Emploi a rdfs:Class ;
+    rdfs:subClassOf sg:Offre ;
+    rdfs:label "Emploi"@fr ;
+    rdfs:comment "Une offre de poste (CDI, CDD…)."@fr .
+
+# ---------------------------------------------------------------------------
+# Classes : les entreprises
+# ---------------------------------------------------------------------------
+
+sg:Entreprise a rdfs:Class ;
+    rdfs:subClassOf foaf:Organization ;
+    rdfs:label "Entreprise"@fr ;
+    rdfs:comment "Une entreprise qui publie des offres."@fr .
+
+sg:Banque a rdfs:Class ;
+    rdfs:subClassOf sg:Entreprise ;
+    rdfs:label "Banque"@fr ;
+    rdfs:comment "Une banque ou une compagnie d'assurance."@fr .
+
+sg:Telecom a rdfs:Class ;
+    rdfs:subClassOf sg:Entreprise ;
+    rdfs:label "Télécom"@fr ;
+    rdfs:comment "Un opérateur de télécommunications."@fr .
+
+sg:EntrepriseTech a rdfs:Class ;
+    rdfs:subClassOf sg:Entreprise ;
+    rdfs:label "Entreprise tech"@fr ;
+    rdfs:comment "Une société informatique, une ESN ou une startup tech."@fr .
+
+# ---------------------------------------------------------------------------
+# Classes : les compétences
+# ---------------------------------------------------------------------------
+
+sg:Competence a rdfs:Class ;
+    rdfs:label "Compétence"@fr ;
+    rdfs:comment "Une compétence demandée par une offre ou possédée par un candidat."@fr .
+
+sg:LangageProgrammation a rdfs:Class ;
+    rdfs:subClassOf sg:Competence ;
+    rdfs:label "Langage de programmation"@fr ;
+    rdfs:comment "Python, Java, JavaScript…"@fr .
+
+sg:Framework a rdfs:Class ;
+    rdfs:subClassOf sg:Competence ;
+    rdfs:label "Framework"@fr ;
+    rdfs:comment "React, Spring, FastAPI…"@fr .
+
+sg:BaseDeDonnees a rdfs:Class ;
+    rdfs:subClassOf sg:Competence ;
+    rdfs:label "Base de données"@fr ;
+    rdfs:comment "SQL, PostgreSQL, MongoDB…"@fr .
+
+sg:CloudDevOps a rdfs:Class ;
+    rdfs:subClassOf sg:Competence ;
+    rdfs:label "Cloud et DevOps"@fr ;
+    rdfs:comment "Docker, AWS, Kubernetes…"@fr .
+
+# ---------------------------------------------------------------------------
+# Classes : lieux et personnes
+# ---------------------------------------------------------------------------
+
+sg:Ville a rdfs:Class ;
+    rdfs:subClassOf schema:Place ;
+    rdfs:label "Ville"@fr ;
+    rdfs:comment "La ville où se trouve le poste."@fr .
+
+sg:Candidat a rdfs:Class ;
+    rdfs:subClassOf foaf:Person ;
+    rdfs:label "Candidat"@fr ;
+    rdfs:comment "Un étudiant qui cherche une offre."@fr .
+
+# ---------------------------------------------------------------------------
+# Propriétés : compétences (hiérarchie rdfs:subPropertyOf)
+# ---------------------------------------------------------------------------
+
+sg:exigeCompetence a rdf:Property ;
+    rdfs:domain sg:Offre ;
+    rdfs:range sg:Competence ;
+    rdfs:label "exige la compétence"@fr ;
+    rdfs:comment "L'offre demande cette compétence, qu'elle soit requise ou souhaitée."@fr .
+
+sg:competenceRequise a rdf:Property ;
+    rdfs:subPropertyOf sg:exigeCompetence ;
+    rdfs:domain sg:Offre ;
+    rdfs:range sg:Competence ;
+    rdfs:label "compétence requise"@fr ;
+    rdfs:comment "Compétence obligatoire pour l'offre."@fr .
+
+sg:competenceSouhaitee a rdf:Property ;
+    rdfs:subPropertyOf sg:exigeCompetence ;
+    rdfs:domain sg:Offre ;
+    rdfs:range sg:Competence ;
+    rdfs:label "compétence souhaitée"@fr ;
+    rdfs:comment "Compétence appréciée mais pas obligatoire (« un plus »)."@fr .
+
+# ---------------------------------------------------------------------------
+# Propriétés : liens entre ressources
+# ---------------------------------------------------------------------------
+
+sg:publieePar a rdf:Property ;
+    rdfs:domain sg:Offre ;
+    rdfs:range sg:Entreprise ;
+    rdfs:label "publiée par"@fr ;
+    rdfs:comment "L'entreprise qui publie l'offre."@fr .
+
+sg:situeeA a rdf:Property ;
+    rdfs:domain sg:Offre ;
+    rdfs:range sg:Ville ;
+    rdfs:label "située à"@fr ;
+    rdfs:comment "La ville du poste."@fr .
+
+sg:possedeCompetence a rdf:Property ;
+    rdfs:domain sg:Candidat ;
+    rdfs:range sg:Competence ;
+    rdfs:label "possède la compétence"@fr ;
+    rdfs:comment "Une compétence que le candidat maîtrise."@fr .
+
+# ---------------------------------------------------------------------------
+# Propriétés : valeurs (littéraux)
+# ---------------------------------------------------------------------------
+
+sg:datePublication a rdf:Property ;
+    rdfs:domain sg:Offre ;
+    rdfs:range xsd:date ;
+    rdfs:label "date de publication"@fr ;
+    rdfs:comment "Date de publication de l'offre (AAAA-MM-JJ)."@fr .
+
+sg:experienceMin a rdf:Property ;
+    rdfs:domain sg:Offre ;
+    rdfs:range xsd:integer ;
+    rdfs:label "expérience minimale"@fr ;
+    rdfs:comment "Nombre minimal d'années d'expérience demandé."@fr .
+
+sg:modeTravail a rdf:Property ;
+    rdfs:domain sg:Offre ;
+    rdfs:range xsd:string ;
+    rdfs:label "mode de travail"@fr ;
+    rdfs:comment "presentiel, hybride ou teletravail."@fr .

@@ -1,0 +1,9 @@
+# R1 (cours, partie « Inférence ») : si x est de type B et B sous-classe de C, alors x est de type C.
+# Exemple : sgd:offre-12 a sg:StagePFE + sg:StagePFE rdfs:subClassOf sg:Stage => sgd:offre-12 a sg:Stage
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?x a ?C }
+WHERE {
+    ?x a ?B .
+    ?B rdfs:subClassOf ?C .
+}

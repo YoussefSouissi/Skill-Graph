@@ -1,0 +1,19 @@
+# Q5 · Correspondance candidat <-> offres 
+# Entrée  : ?candidat (lié par initBindings, ex. sgd:candidat-youssef)
+# Sorties : ?offre ?titre ?nbRequises ?nbPossedees
+# Pour chaque offre : nombre de compétences requises, et combien le candidat en possède.
+# Le score en % (nbPossedees / nbRequises) est calculé en Python par le web service.
+PREFIX sg:      <http://skillgraph-tn.org/vocab#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+SELECT ?offre ?titre (COUNT(DISTINCT ?competence) AS ?nbRequises) (COUNT(DISTINCT ?possedee) AS ?nbPossedees)
+WHERE {
+    ?offre sg:competenceRequise ?competence ;
+           dcterms:title ?titre .
+    OPTIONAL {
+        ?candidat sg:possedeCompetence ?competence .
+        BIND(?competence AS ?possedee)
+    }
+}
+GROUP BY ?offre ?titre
+ORDER BY DESC(?nbPossedees) ?titre

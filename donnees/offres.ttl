@@ -1,0 +1,853 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <https://schema.org/> .
+@prefix sg: <http://skillgraph-tn.org/vocab#> .
+@prefix sgd: <http://skillgraph-tn.org/donnees/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sgd:offre-kj-247915 a sg:Emploi ;
+    dcterms:title "Administrateur Systèmes et Réseaux" ;
+    sg:competenceRequise sgd:competence-sql,
+        sgd:competence-sqlserver ;
+    sg:datePublication "2026-10-16"^^xsd:date ;
+    sg:experienceMin 3 ;
+    sg:publieePar sgd:entreprise-soquibat ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.keejob.com/offres-emploi/247915/administrateur-syst%C3%A8mes-et-r%C3%A9seaux/"^^xsd:anyURI .
+
+sgd:offre-kj-247932 a sg:Emploi ;
+    dcterms:title "Développeur applications mobiles (H/F)" ;
+    sg:competenceRequise sgd:competence-csharp,
+        sgd:competence-dotnet,
+        sgd:competence-git,
+        sgd:competence-javascript,
+        sgd:competence-sql,
+        sgd:competence-sqlserver ;
+    sg:datePublication "2026-10-16"^^xsd:date ;
+    sg:experienceMin 2 ;
+    sg:modeTravail "presentiel" ;
+    sg:publieePar sgd:entreprise-cisa-informatique ;
+    sg:situeeA sgd:ville-sousse ;
+    schema:url "https://www.keejob.com/offres-emploi/247932/d%C3%A9veloppeur-applications-mobiles-hf-sousse/"^^xsd:anyURI .
+
+sgd:offre-kj-247979 a sg:Emploi ;
+    dcterms:title "Full-stack Developer: Symfony, VueJS, Mobile" ;
+    sg:competenceRequise sgd:competence-javascript,
+        sgd:competence-mysql,
+        sgd:competence-nodejs,
+        sgd:competence-php,
+        sgd:competence-postgresql ;
+    sg:datePublication "2026-10-02"^^xsd:date ;
+    sg:experienceMin 2 ;
+    sg:modeTravail "hybride" ;
+    sg:publieePar sgd:entreprise-rayen-soft ;
+    sg:situeeA sgd:ville-zaghouan ;
+    schema:url "https://www.keejob.com/offres-emploi/247979/full-stack-developer-symfony-vuejs-mobile/"^^xsd:anyURI .
+
+sgd:offre-kj-247985 a sg:Emploi ;
+    dcterms:title "BUSINESS APPLICATIONS SPECIALIST – DATA & IA" ;
+    sg:competenceRequise sgd:competence-sql ;
+    sg:datePublication "2026-10-17"^^xsd:date ;
+    sg:experienceMin 3 ;
+    sg:modeTravail "presentiel" ;
+    sg:publieePar sgd:entreprise-entreprise-anonyme ;
+    sg:situeeA sgd:ville-ben-arous ;
+    schema:url "https://www.keejob.com/offres-emploi/247985/business-applications-specialist-data-ia/"^^xsd:anyURI .
+
+sgd:offre-kj-248558 a sg:Emploi ;
+    dcterms:title "DEVELOPPEUR SOFTWARE ‘HPC’ JUNIOR" ;
+    sg:competenceRequise sgd:competence-cpp,
+        sgd:competence-linux,
+        sgd:competence-python ;
+    sg:datePublication "2026-10-30"^^xsd:date ;
+    sg:experienceMin 1 ;
+    sg:modeTravail "teletravail" ;
+    sg:publieePar sgd:entreprise-ennolab ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.keejob.com/offres-emploi/248558/developpeur-software-hpc-junior/"^^xsd:anyURI .
+
+sgd:offre-kj-248599 a sg:Emploi ;
+    dcterms:title "Consultant en collecte de données" ;
+    sg:competenceRequise sgd:competence-sql ;
+    sg:datePublication "2026-10-30"^^xsd:date ;
+    sg:experienceMin 3 ;
+    sg:modeTravail "teletravail" ;
+    sg:publieePar sgd:entreprise-comete-ai ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.keejob.com/offres-emploi/248599/consultant-en-collecte-de-donn%C3%A9es/"^^xsd:anyURI .
+
+sgd:offre-kj-248648 a sg:Emploi ;
+    dcterms:title "Responsable Infrastructure & Sécurité IT" ;
+    sg:competenceRequise sgd:competence-linux,
+        sgd:competence-oracle,
+        sgd:competence-sql,
+        sgd:competence-sqlserver ;
+    sg:competenceSouhaitee sgd:competence-azure ;
+    sg:datePublication "2026-10-30"^^xsd:date ;
+    sg:experienceMin 7 ;
+    sg:modeTravail "presentiel" ;
+    sg:publieePar sgd:entreprise-cfe-tunisie ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.keejob.com/offres-emploi/248648/responsable-infrastructure-s%C3%A9curit%C3%A9-it/"^^xsd:anyURI .
+
+sgd:offre-kj-249099 a sg:Emploi ;
+    dcterms:title "Responsable Infrastructure et Exploitation IT" ;
+    sg:competenceRequise sgd:competence-docker,
+        sgd:competence-linux ;
+    sg:datePublication "2026-10-26"^^xsd:date ;
+    sg:experienceMin 2 ;
+    sg:publieePar sgd:entreprise-active-contact ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.keejob.com/offres-emploi/249099/responsable-infrastructure-et-exploitation-it/"^^xsd:anyURI .
+
+sgd:offre-kj-249198 a sg:Emploi ;
+    dcterms:title "Ingénieur IA / Backend Python" ;
+    sg:competenceRequise sgd:competence-django,
+        sgd:competence-docker,
+        sgd:competence-fastapi,
+        sgd:competence-flask,
+        sgd:competence-git,
+        sgd:competence-linux,
+        sgd:competence-python,
+        sgd:competence-sql ;
+    sg:datePublication "2026-10-28"^^xsd:date ;
+    sg:experienceMin 1 ;
+    sg:modeTravail "teletravail" ;
+    sg:publieePar sgd:entreprise-jk-technics ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.keejob.com/offres-emploi/249198/ing%C3%A9nieur-ia-backend-python/"^^xsd:anyURI .
+
+sgd:offre-kj-249199 a sg:Emploi ;
+    dcterms:title "Ingénieur full stack" ;
+    sg:competenceRequise sgd:competence-angular,
+        sgd:competence-java,
+        sgd:competence-nodejs,
+        sgd:competence-php,
+        sgd:competence-python,
+        sgd:competence-react,
+        sgd:competence-sql ;
+    sg:datePublication "2026-10-28"^^xsd:date ;
+    sg:experienceMin 1 ;
+    sg:modeTravail "teletravail" ;
+    sg:publieePar sgd:entreprise-jk-technics ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.keejob.com/offres-emploi/249199/ing%C3%A9nieur-full-stack/"^^xsd:anyURI .
+
+sgd:offre-kj-249241 a sg:Emploi ;
+    dcterms:title "Développeur Full Stack confirmé" ;
+    sg:competenceRequise sgd:competence-typescript ;
+    sg:competenceSouhaitee sgd:competence-aws,
+        sgd:competence-azure,
+        sgd:competence-git ;
+    sg:datePublication "2026-10-29"^^xsd:date ;
+    sg:experienceMin 2 ;
+    sg:modeTravail "presentiel" ;
+    sg:publieePar sgd:entreprise-neopro ;
+    sg:situeeA sgd:ville-nabeul ;
+    schema:url "https://www.keejob.com/offres-emploi/249241/d%C3%A9veloppeur-full-stack-confirm%C3%A9-hf-nabeul/"^^xsd:anyURI .
+
+sgd:offre-kj-249243 a sg:StagePFE ;
+    dcterms:title "Stage ingénieur fullstack" ;
+    sg:competenceRequise sgd:competence-angular,
+        sgd:competence-javascript,
+        sgd:competence-nodejs,
+        sgd:competence-react,
+        sgd:competence-spring,
+        sgd:competence-sql ;
+    sg:competenceSouhaitee sgd:competence-django ;
+    sg:datePublication "2026-10-29"^^xsd:date ;
+    sg:modeTravail "teletravail" ;
+    sg:publieePar sgd:entreprise-jk-technics ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.keejob.com/offres-emploi/249243/stage-ing%C3%A9nieur-fullstack/"^^xsd:anyURI .
+
+sgd:offre-kj-249246 a sg:StagePFE ;
+    dcterms:title "Stage ingénieur IA" ;
+    sg:competenceRequise sgd:competence-python ;
+    sg:competenceSouhaitee sgd:competence-pytorch,
+        sgd:competence-tensorflow ;
+    sg:datePublication "2026-10-29"^^xsd:date ;
+    sg:modeTravail "teletravail" ;
+    sg:publieePar sgd:entreprise-jk-technics ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.keejob.com/offres-emploi/249246/stage-ing%C3%A9nieur-ia/"^^xsd:anyURI .
+
+sgd:offre-kj-249276 a sg:Emploi ;
+    dcterms:title "Ingénieur en Génie Logiciel" ;
+    sg:competenceRequise sgd:competence-angular,
+        sgd:competence-azure,
+        sgd:competence-csharp,
+        sgd:competence-dotnet,
+        sgd:competence-java,
+        sgd:competence-javascript,
+        sgd:competence-laravel,
+        sgd:competence-nodejs,
+        sgd:competence-php,
+        sgd:competence-python,
+        sgd:competence-react,
+        sgd:competence-sql ;
+    sg:competenceSouhaitee sgd:competence-git ;
+    sg:datePublication "2026-10-30"^^xsd:date ;
+    sg:experienceMin 2 ;
+    sg:modeTravail "presentiel" ;
+    sg:publieePar sgd:entreprise-association-tunisienne-des-villages-d-enfants-sos ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.keejob.com/offres-emploi/249276/ing%C3%A9nieur-en-g%C3%A9nie-logiciel/"^^xsd:anyURI .
+
+sgd:offre-tj-2000309 a sg:Emploi ;
+    dcterms:title "Ingénieur Informatique & Cybersécurité (H/F)" ;
+    sg:competenceRequise sgd:competence-linux ;
+    sg:competenceSouhaitee sgd:competence-python ;
+    sg:datePublication "2026-10-21"^^xsd:date ;
+    sg:experienceMin 3 ;
+    sg:publieePar sgd:entreprise-xpertcall ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.tanitjobs.com/job/2000309/ingénieur-informatique-cybersécurité-h-f-tunis/"^^xsd:anyURI .
+
+sgd:offre-tj-2025593 a sg:Emploi ;
+    dcterms:title "Web Scraping Engineer (H/F)" ;
+    sg:competenceRequise sgd:competence-docker,
+        sgd:competence-git,
+        sgd:competence-javascript,
+        sgd:competence-postgresql,
+        sgd:competence-python ;
+    sg:datePublication "2026-10-20"^^xsd:date ;
+    sg:experienceMin 1 ;
+    sg:publieePar sgd:entreprise-rk-digital ;
+    sg:situeeA sgd:ville-monastir ;
+    schema:url "https://www.tanitjobs.com/job/2025593/web-scraping-engineer-h-f-monastir/"^^xsd:anyURI .
+
+sgd:offre-tj-2036516 a sg:Emploi ;
+    dcterms:title "Poste de Data Engineer chez Bestlab" ;
+    sg:competenceRequise sgd:competence-aws,
+        sgd:competence-azure,
+        sgd:competence-docker,
+        sgd:competence-git,
+        sgd:competence-java,
+        sgd:competence-kubernetes,
+        sgd:competence-linux,
+        sgd:competence-mongodb,
+        sgd:competence-mysql,
+        sgd:competence-postgresql,
+        sgd:competence-python,
+        sgd:competence-spark,
+        sgd:competence-sql ;
+    sg:datePublication "2026-10-27"^^xsd:date ;
+    sg:experienceMin 0 ;
+    sg:publieePar sgd:entreprise-bestlab ;
+    sg:situeeA sgd:ville-ariana ;
+    schema:url "https://www.tanitjobs.com/job/2036516/data-engineer-klnwx-h-f-ariana/"^^xsd:anyURI .
+
+sgd:offre-tj-2037780 a sg:Emploi ;
+    dcterms:title "Android Developer (H/F)" ;
+    sg:competenceRequise sgd:competence-git,
+        sgd:competence-java,
+        sgd:competence-jenkins ;
+    sg:datePublication "2026-10-15"^^xsd:date ;
+    sg:experienceMin 5 ;
+    sg:publieePar sgd:entreprise-streamwide ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.tanitjobs.com/job/2037780/android-developer-h-f-tunis/"^^xsd:anyURI .
+
+sgd:offre-tj-2038142 a sg:Emploi ;
+    dcterms:title "Technicien(ne) informatique, support TI niveau 2 (H/F)" ;
+    sg:competenceRequise sgd:competence-linux ;
+    sg:competenceSouhaitee sgd:competence-azure ;
+    sg:datePublication "2026-10-15"^^xsd:date ;
+    sg:experienceMin 3 ;
+    sg:modeTravail "presentiel" ;
+    sg:publieePar sgd:entreprise-centre-canadien-de-services-dagents-virtuels ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.tanitjobs.com/job/2038142/technicien-ne-informatique-support-ti-niveau-2-h-f-tunis/"^^xsd:anyURI .
+
+sgd:offre-tj-2040776 a sg:Emploi ;
+    dcterms:title "Responsable d'activité Web, management et avant-vente (H/F)" ;
+    sg:competenceRequise sgd:competence-linux,
+        sgd:competence-php ;
+    sg:datePublication "2026-10-15"^^xsd:date ;
+    sg:experienceMin 7 ;
+    sg:publieePar sgd:entreprise-centre-canadien-de-services-dagents-virtuels ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.tanitjobs.com/job/2040776/responsable-d-activité-web-management-et-avant-vente-h-f-tunis/"^^xsd:anyURI .
+
+sgd:offre-tj-2043356 a sg:Emploi ;
+    dcterms:title "Fusion QA Engineer (H/F)" ;
+    sg:competenceRequise sgd:competence-linux ;
+    sg:datePublication "2026-10-20"^^xsd:date ;
+    sg:experienceMin 3 ;
+    sg:modeTravail "hybride" ;
+    sg:publieePar sgd:entreprise-streamwide ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.tanitjobs.com/job/2043356/fusion-qa-engineer-h-f-tunis/"^^xsd:anyURI .
+
+sgd:offre-tj-2052321 a sg:Emploi ;
+    dcterms:title "Développeur WordPress (H/F)" ;
+    sg:competenceRequise sgd:competence-laravel,
+        sgd:competence-php ;
+    sg:competenceSouhaitee sgd:competence-java ;
+    sg:datePublication "2026-10-24"^^xsd:date ;
+    sg:experienceMin 3 ;
+    sg:publieePar sgd:entreprise-egb ;
+    sg:situeeA sgd:ville-sfax ;
+    schema:url "https://www.tanitjobs.com/job/2052321/développeur-wordpress-h-f-sfax/"^^xsd:anyURI .
+
+sgd:offre-tj-2062380 a sg:Emploi ;
+    dcterms:title "Data Scientist (DSUDHT0045) (H/F)" ;
+    sg:competenceRequise sgd:competence-mongodb,
+        sgd:competence-mysql,
+        sgd:competence-postgresql,
+        sgd:competence-python,
+        sgd:competence-sql ;
+    sg:competenceSouhaitee sgd:competence-docker,
+        sgd:competence-tensorflow ;
+    sg:datePublication "2026-10-20"^^xsd:date ;
+    sg:experienceMin 1 ;
+    sg:modeTravail "hybride" ;
+    sg:publieePar sgd:entreprise-smart-conseil ;
+    sg:situeeA sgd:ville-gabes ;
+    schema:url "https://www.tanitjobs.com/job/2062380/data-scientist-dsudht0045-h-f-gabès/"^^xsd:anyURI .
+
+sgd:offre-tj-2062632 a sg:Emploi ;
+    dcterms:title "Senior AI Full-Stack Developer (H/F)" ;
+    sg:competenceRequise sgd:competence-javascript,
+        sgd:competence-python,
+        sgd:competence-typescript ;
+    sg:competenceSouhaitee sgd:competence-git ;
+    sg:datePublication "2026-10-14"^^xsd:date ;
+    sg:experienceMin 5 ;
+    sg:modeTravail "teletravail" ;
+    sg:publieePar sgd:entreprise-martechlabs ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.tanitjobs.com/job/2062632/senior-ai-full-stack-developer-h-f-tunis/"^^xsd:anyURI .
+
+sgd:offre-tj-2062816 a sg:Emploi ;
+    dcterms:title "Développeur Confirmé .NET C# (H/F)" ;
+    sg:competenceRequise sgd:competence-csharp,
+        sgd:competence-dotnet,
+        sgd:competence-git,
+        sgd:competence-sql ;
+    sg:datePublication "2026-10-15"^^xsd:date ;
+    sg:experienceMin 3 ;
+    sg:publieePar sgd:entreprise-isi-digital ;
+    sg:situeeA sgd:ville-ariana ;
+    schema:url "https://www.tanitjobs.com/job/2062816/développeur-confirmé-net-c-h-f-ariana/"^^xsd:anyURI .
+
+sgd:offre-tj-2063000 a sg:Stage ;
+    dcterms:title "Stage professionnel 2026-2027 (H/F)" ;
+    sg:competenceRequise sgd:competence-javascript,
+        sgd:competence-python ;
+    sg:competenceSouhaitee sgd:competence-sql ;
+    sg:datePublication "2026-10-15"^^xsd:date ;
+    sg:modeTravail "teletravail" ;
+    sg:publieePar sgd:entreprise-devsync ;
+    sg:situeeA sgd:ville-zaghouan ;
+    schema:url "https://www.tanitjobs.com/job/2063000/stage-professionnel-2026-2027-h-f-zaghouan/"^^xsd:anyURI .
+
+sgd:offre-tj-2063120 a sg:Emploi ;
+    dcterms:title "Tech Lead Full-Stack (H/F)" ;
+    sg:competenceRequise sgd:competence-docker,
+        sgd:competence-linux,
+        sgd:competence-mongodb,
+        sgd:competence-nodejs,
+        sgd:competence-react,
+        sgd:competence-typescript ;
+    sg:competenceSouhaitee sgd:competence-kubernetes ;
+    sg:datePublication "2026-10-15"^^xsd:date ;
+    sg:experienceMin 6 ;
+    sg:modeTravail "hybride" ;
+    sg:publieePar sgd:entreprise-youthna ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.tanitjobs.com/job/2063120/tech-lead-full-stack-h-f-tunis/"^^xsd:anyURI .
+
+sgd:offre-tj-2064027 a sg:Emploi ;
+    dcterms:title "Développeur C# / .NET — Niveau intermédiaire confirmé — — 2 à 5 ans d’expérience (H/F)" ;
+    sg:competenceRequise sgd:competence-csharp,
+        sgd:competence-dotnet,
+        sgd:competence-sql ;
+    sg:competenceSouhaitee sgd:competence-javascript ;
+    sg:datePublication "2026-10-29"^^xsd:date ;
+    sg:experienceMin 2 ;
+    sg:modeTravail "presentiel" ;
+    sg:publieePar sgd:entreprise-technique-mecanographique-service-tms ;
+    sg:situeeA sgd:ville-sousse ;
+    schema:url "https://www.tanitjobs.com/job/2064027/développeur-c-net-niveau-intermédiaire-confirmé-2-à-5-ans-d-expérience-h-f-sousse/"^^xsd:anyURI .
+
+sgd:offre-tj-2064457 a sg:Emploi ;
+    dcterms:title "Un(e) Développeur(se) Fullstack Senior NestJS / ReactJS (H/F)" ;
+    sg:competenceRequise sgd:competence-git,
+        sgd:competence-mysql,
+        sgd:competence-nodejs,
+        sgd:competence-sql,
+        sgd:competence-typescript ;
+    sg:datePublication "2026-10-19"^^xsd:date ;
+    sg:experienceMin 5 ;
+    sg:modeTravail "hybride" ;
+    sg:publieePar sgd:entreprise-core-edge ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.tanitjobs.com/job/2064457/un-e-développeur-se-fullstack-senior-nestjs-reactjs-h-f-tunis/"^^xsd:anyURI .
+
+sgd:offre-tj-2064507 a sg:Emploi ;
+    dcterms:title "Ingénieur Réseau & Infrastructure (H/F)" ;
+    sg:competenceRequise sgd:competence-linux ;
+    sg:datePublication "2026-10-19"^^xsd:date ;
+    sg:experienceMin 1 ;
+    sg:modeTravail "presentiel" ;
+    sg:publieePar sgd:entreprise-simplydesk ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.tanitjobs.com/job/2064507/ingénieur-réseau-infrastructure-h-f-tunis/"^^xsd:anyURI .
+
+sgd:offre-tj-2065442 a sg:Emploi ;
+    dcterms:title "Junior IT System Administrator Tunisia Junior IT System Administrator (H/F)" ;
+    sg:competenceRequise sgd:competence-azure ;
+    sg:datePublication "2026-10-21"^^xsd:date ;
+    sg:experienceMin 2 ;
+    sg:publieePar sgd:entreprise-dr-oetker-gias ;
+    sg:situeeA sgd:ville-grombalia ;
+    schema:url "https://www.tanitjobs.com/job/2065442/junior-it-system-administrator-tunisia-junior-it-system-administrator-h-f-grombalia/"^^xsd:anyURI .
+
+sgd:offre-tj-2065770 a sg:Emploi ;
+    dcterms:title "Consultant(e) Technico-Fonctionnel(le) Retail (H/F)" ;
+    sg:competenceRequise sgd:competence-sql ;
+    sg:datePublication "2026-10-22"^^xsd:date ;
+    sg:experienceMin 1 ;
+    sg:publieePar sgd:entreprise-oopos-by-joolan ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.tanitjobs.com/job/2065770/consultant-e-technico-fonctionnel-le-retail-h-f-tunis/"^^xsd:anyURI .
+
+sgd:offre-tj-2065918 a sg:Emploi ;
+    dcterms:title "Assistant chef de projet (LSNFZ) (H/F)" ;
+    sg:competenceRequise sgd:competence-azure ;
+    sg:datePublication "2026-10-22"^^xsd:date ;
+    sg:modeTravail "hybride" ;
+    sg:publieePar sgd:entreprise-bestlab ;
+    sg:situeeA sgd:ville-ariana ;
+    schema:url "https://www.tanitjobs.com/job/2065918/assistant-chef-de-projet-lsnfz-h-f-ariana/"^^xsd:anyURI .
+
+sgd:offre-tj-2066027 a sg:Emploi ;
+    dcterms:title "Consultant·e IA & Formateur·rice (H/F)" ;
+    sg:competenceRequise sgd:competence-aws,
+        sgd:competence-python ;
+    sg:datePublication "2026-10-23"^^xsd:date ;
+    sg:experienceMin 3 ;
+    sg:publieePar sgd:entreprise-vinci-soc ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.tanitjobs.com/job/2066027/consultant-e-ia-formateur-rice-h-f-tunis/"^^xsd:anyURI .
+
+sgd:offre-tj-2066213 a sg:Emploi ;
+    dcterms:title "Tech Lead Senior GCP (H/F)" ;
+    sg:competenceRequise sgd:competence-python ;
+    sg:datePublication "2026-10-23"^^xsd:date ;
+    sg:experienceMin 3 ;
+    sg:publieePar sgd:entreprise-databiz ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.tanitjobs.com/job/2066213/tech-lead-senior-gcp-h-f-tunis/"^^xsd:anyURI .
+
+sgd:offre-tj-2066216 a sg:Emploi ;
+    dcterms:title "Ingénieur Senior DevOps (H/F)" ;
+    sg:competenceRequise sgd:competence-aws,
+        sgd:competence-azure,
+        sgd:competence-docker,
+        sgd:competence-git,
+        sgd:competence-python,
+        sgd:competence-spark,
+        sgd:competence-sql ;
+    sg:datePublication "2026-10-23"^^xsd:date ;
+    sg:experienceMin 5 ;
+    sg:publieePar sgd:entreprise-databiz ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.tanitjobs.com/job/2066216/ingénieur-senior-devops-h-f-tunis/"^^xsd:anyURI .
+
+sgd:offre-tj-2066221 a sg:Emploi ;
+    dcterms:title "Administrateur Système Senior (H/F)" ;
+    sg:competenceRequise sgd:competence-jenkins ;
+    sg:competenceSouhaitee sgd:competence-aws,
+        sgd:competence-azure,
+        sgd:competence-docker ;
+    sg:datePublication "2026-10-23"^^xsd:date ;
+    sg:experienceMin 3 ;
+    sg:publieePar sgd:entreprise-databiz ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.tanitjobs.com/job/2066221/administrateur-système-senior-h-f-tunis/"^^xsd:anyURI .
+
+sgd:offre-tj-2066325 a sg:Emploi ;
+    dcterms:title "Développeur Full Stack Junior / Technicien Supérieur en Informatique (H/F)" ;
+    sg:competenceRequise sgd:competence-csharp,
+        sgd:competence-dotnet,
+        sgd:competence-javascript,
+        sgd:competence-nodejs,
+        sgd:competence-postgresql,
+        sgd:competence-react,
+        sgd:competence-sql,
+        sgd:competence-sqlserver,
+        sgd:competence-typescript ;
+    sg:competenceSouhaitee sgd:competence-mysql ;
+    sg:datePublication "2026-10-24"^^xsd:date ;
+    sg:publieePar sgd:entreprise-mecamarket-sarl ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.tanitjobs.com/job/2066325/développeur-full-stack-junior-technicien-supérieur-en-informatique-h-f-tunis/"^^xsd:anyURI .
+
+sgd:offre-tj-2066378 a sg:Emploi ;
+    dcterms:title "Développeuse informatique intermédiaire (F) – Sousse TMS commercial - Sousse, Tunisie" ;
+    sg:competenceRequise sgd:competence-csharp,
+        sgd:competence-dotnet,
+        sgd:competence-sql ;
+    sg:competenceSouhaitee sgd:competence-java,
+        sgd:competence-php,
+        sgd:competence-python ;
+    sg:datePublication "2026-10-29"^^xsd:date ;
+    sg:experienceMin 3 ;
+    sg:modeTravail "presentiel" ;
+    sg:publieePar sgd:entreprise-tms ;
+    sg:situeeA sgd:ville-khezama-ouest ;
+    schema:url "https://www.tanitjobs.com/job/2066378/développeuse-informatique-intermédiaire-f-sousse/"^^xsd:anyURI .
+
+sgd:offre-tj-2066395 a sg:Emploi ;
+    dcterms:title "Développeurs Java Fullstack, Dev Front Vue.js/React/Angular (H/F)" ;
+    sg:competenceRequise sgd:competence-angular,
+        sgd:competence-java,
+        sgd:competence-nodejs,
+        sgd:competence-react ;
+    sg:competenceSouhaitee sgd:competence-php,
+        sgd:competence-python ;
+    sg:datePublication "2026-10-24"^^xsd:date ;
+    sg:experienceMin 3 ;
+    sg:publieePar sgd:entreprise-euro-talent-link ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.tanitjobs.com/job/2066395/développeurs-java-fullstack-dev-front-vue-js-react-angular-h-f-tunis/"^^xsd:anyURI .
+
+sgd:offre-tj-2066492 a sg:Emploi ;
+    dcterms:title "Senior Frontend Developer (React) (H/F)" ;
+    sg:competenceRequise sgd:competence-javascript,
+        sgd:competence-react ;
+    sg:competenceSouhaitee sgd:competence-git ;
+    sg:datePublication "2026-10-24"^^xsd:date ;
+    sg:experienceMin 5 ;
+    sg:modeTravail "hybride" ;
+    sg:publieePar sgd:entreprise-oxton-digital ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.tanitjobs.com/job/2066492/senior-frontend-developer-react-h-f-tunis/"^^xsd:anyURI .
+
+sgd:offre-tj-2066898 a sg:Emploi ;
+    dcterms:title "Support applicatif de niveau 2 (H/F)" ;
+    sg:competenceRequise sgd:competence-aws,
+        sgd:competence-postgresql,
+        sgd:competence-sql ;
+    sg:datePublication "2026-10-26"^^xsd:date ;
+    sg:experienceMin 3 ;
+    sg:modeTravail "hybride" ;
+    sg:publieePar sgd:entreprise-rhis-software ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.tanitjobs.com/job/2066898/support-applicatif-de-niveau-2-h-f-tunis/"^^xsd:anyURI .
+
+sgd:offre-tj-2067025 a sg:Emploi ;
+    dcterms:title "React.js Front-End & AI Developer (H/F)" ;
+    sg:competenceRequise sgd:competence-git,
+        sgd:competence-javascript,
+        sgd:competence-nodejs,
+        sgd:competence-react ;
+    sg:competenceSouhaitee sgd:competence-python,
+        sgd:competence-sql,
+        sgd:competence-typescript ;
+    sg:datePublication "2026-10-26"^^xsd:date ;
+    sg:experienceMin 2 ;
+    sg:modeTravail "presentiel" ;
+    sg:publieePar sgd:entreprise-matrixcel-business ;
+    sg:situeeA sgd:ville-sousse ;
+    schema:url "https://www.tanitjobs.com/job/2067025/react-js-front-end-ai-developer-h-f-sousse/"^^xsd:anyURI .
+
+sgd:offre-tj-2067087 a sg:Emploi ;
+    dcterms:title "Ingénieurs Full Stack & Expert PHP (H/F) – Télétravail" ;
+    sg:competenceRequise sgd:competence-angular,
+        sgd:competence-docker,
+        sgd:competence-git,
+        sgd:competence-javascript,
+        sgd:competence-linux,
+        sgd:competence-mysql,
+        sgd:competence-php,
+        sgd:competence-postgresql,
+        sgd:competence-react ;
+    sg:competenceSouhaitee sgd:competence-aws,
+        sgd:competence-azure,
+        sgd:competence-laravel ;
+    sg:datePublication "2026-10-26"^^xsd:date ;
+    sg:experienceMin 3 ;
+    sg:modeTravail "teletravail" ;
+    sg:publieePar sgd:entreprise-saamp ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.tanitjobs.com/job/2067087/ingénieurs-full-stack-expert-php-h-f-télétravail-tunis/"^^xsd:anyURI .
+
+sgd:offre-tj-2067167 a sg:Emploi ;
+    dcterms:title "Développeur Full-Stack & Mobile (H/F)" ;
+    sg:competenceRequise sgd:competence-docker,
+        sgd:competence-git,
+        sgd:competence-linux ;
+    sg:datePublication "2026-10-27"^^xsd:date ;
+    sg:experienceMin 3 ;
+    sg:modeTravail "hybride" ;
+    sg:publieePar sgd:entreprise-biodex-sa ;
+    sg:situeeA sgd:ville-fouchana ;
+    schema:url "https://www.tanitjobs.com/job/2067167/développeur-full-stack-mobile-h-f-fouchana/"^^xsd:anyURI .
+
+sgd:offre-tj-2067764 a sg:Emploi ;
+    dcterms:title "Formateur en informatique (YDXMQ)" ;
+    sg:competenceRequise sgd:competence-java,
+        sgd:competence-javascript,
+        sgd:competence-python,
+        sgd:competence-sql ;
+    sg:datePublication "2026-10-28"^^xsd:date ;
+    sg:experienceMin 3 ;
+    sg:publieePar sgd:entreprise-bestlab ;
+    sg:situeeA sgd:ville-ariana ;
+    schema:url "https://www.tanitjobs.com/job/2067764/formateur-en-informatique-ydxmq/"^^xsd:anyURI .
+
+sgd:offre-tj-2067873 a sg:Emploi ;
+    dcterms:title "Développeur PHP/SYMFONY" ;
+    sg:competenceRequise sgd:competence-php ;
+    sg:datePublication "2026-10-28"^^xsd:date ;
+    sg:experienceMin 5 ;
+    sg:publieePar sgd:entreprise-tt-marketing ;
+    sg:situeeA sgd:ville-sokra ;
+    schema:url "https://www.tanitjobs.com/job/2067873/développeur-php-symfony/"^^xsd:anyURI .
+
+sgd:offre-tj-2067975 a sg:Emploi ;
+    dcterms:title "Ingénieur·e informatique — Expert Odoo" ;
+    sg:competenceRequise sgd:competence-git,
+        sgd:competence-postgresql,
+        sgd:competence-python ;
+    sg:datePublication "2026-10-29"^^xsd:date ;
+    sg:experienceMin 3 ;
+    sg:modeTravail "presentiel" ;
+    sg:publieePar sgd:entreprise-lassaye-trade ;
+    sg:situeeA sgd:ville-hammam-sousse ;
+    schema:url "https://www.tanitjobs.com/job/2067975/ingénieur-e-informatique-expert-odoo/"^^xsd:anyURI .
+
+sgd:offre-tj-2068070 a sg:Emploi ;
+    dcterms:title "Développeur Salesforce Technique – Apex / LWC / FMS" ;
+    sg:competenceRequise sgd:competence-git,
+        sgd:competence-javascript ;
+    sg:datePublication "2026-10-29"^^xsd:date ;
+    sg:experienceMin 3 ;
+    sg:modeTravail "teletravail" ;
+    sg:publieePar sgd:entreprise-euo-sparks ;
+    sg:situeeA sgd:ville-ariana ;
+    schema:url "https://www.tanitjobs.com/job/2068070/développeur-salesforce-technique-apex-lwc-fms/"^^xsd:anyURI .
+
+sgd:offre-tj-2068548 a sg:Emploi ;
+    dcterms:title "Senior Cybersecurity Engineer" ;
+    sg:competenceRequise sgd:competence-python ;
+    sg:competenceSouhaitee sgd:competence-aws,
+        sgd:competence-azure ;
+    sg:datePublication "2026-10-30"^^xsd:date ;
+    sg:experienceMin 5 ;
+    sg:publieePar sgd:entreprise-databiz ;
+    sg:situeeA sgd:ville-tunis ;
+    schema:url "https://www.tanitjobs.com/job/2068548/senior-cybersecurity-engineer/"^^xsd:anyURI .
+
+sgd:competence-cpp a sg:LangageProgrammation ;
+    foaf:name "C++" .
+
+sgd:competence-fastapi a sg:Framework ;
+    foaf:name "FastAPI" .
+
+sgd:competence-flask a sg:Framework ;
+    foaf:name "Flask" .
+
+sgd:competence-oracle a sg:BaseDeDonnees ;
+    foaf:name "Oracle" .
+
+sgd:competence-pytorch a sg:Framework ;
+    foaf:name "PyTorch" .
+
+sgd:competence-spring a sg:Framework ;
+    foaf:name "Spring" .
+
+sgd:entreprise-active-contact foaf:name "Active Contact" .
+
+sgd:entreprise-association-tunisienne-des-villages-d-enfants-sos foaf:name "Association Tunisienne des Villages d'Enfants SOS" .
+
+sgd:entreprise-biodex-sa foaf:name "BIODEX SA" .
+
+sgd:entreprise-cfe-tunisie foaf:name "CFE TUNISIE" .
+
+sgd:entreprise-cisa-informatique foaf:name "CISA INFORMATIQUE" .
+
+sgd:entreprise-comete-ai foaf:name "comete.ai" .
+
+sgd:entreprise-core-edge foaf:name "Core Edge" .
+
+sgd:entreprise-devsync foaf:name "DevSync" .
+
+sgd:entreprise-dr-oetker-gias foaf:name "Dr Oetker GIAS" .
+
+sgd:entreprise-egb foaf:name "EGB" .
+
+sgd:entreprise-ennolab foaf:name "ENNOLAB" .
+
+sgd:entreprise-entreprise-anonyme foaf:name "Entreprise Anonyme" .
+
+sgd:entreprise-euo-sparks foaf:name "euo sparks" .
+
+sgd:entreprise-euro-talent-link foaf:name "Euro Talent Link" .
+
+sgd:entreprise-isi-digital foaf:name "ISI Digital" .
+
+sgd:entreprise-lassaye-trade foaf:name "Lassaye trade" .
+
+sgd:entreprise-martechlabs foaf:name "Martechlabs" .
+
+sgd:entreprise-matrixcel-business foaf:name "Matrixcel Business" .
+
+sgd:entreprise-mecamarket-sarl foaf:name "MECAMARKET SARL" .
+
+sgd:entreprise-neopro foaf:name "NEOPRO" .
+
+sgd:entreprise-oopos-by-joolan foaf:name "OOPOS BY JOOLAN" .
+
+sgd:entreprise-oxton-digital foaf:name "Oxton Digital" .
+
+sgd:entreprise-rayen-soft foaf:name "RAYEN SOFT" .
+
+sgd:entreprise-rhis-software foaf:name "Rhis Software" .
+
+sgd:entreprise-rk-digital foaf:name "Rk digital" .
+
+sgd:entreprise-saamp foaf:name "Saamp" .
+
+sgd:entreprise-simplydesk foaf:name "SimplyDesk" .
+
+sgd:entreprise-smart-conseil foaf:name "Smart Conseil" .
+
+sgd:entreprise-soquibat foaf:name "SOQUIBAT" .
+
+sgd:entreprise-technique-mecanographique-service-tms foaf:name "Technique Mécanographique Service (TMS)" .
+
+sgd:entreprise-tms foaf:name "TMS" .
+
+sgd:entreprise-tt-marketing foaf:name "TT Marketing" .
+
+sgd:entreprise-vinci-soc foaf:name "Vinci SOC" .
+
+sgd:entreprise-xpertcall foaf:name "Xpertcall" .
+
+sgd:entreprise-youthna foaf:name "Youthna" .
+
+sgd:ville-ben-arous foaf:name "Ben Arous" .
+
+sgd:ville-fouchana foaf:name "Fouchana" .
+
+sgd:ville-gabes foaf:name "Gabès" .
+
+sgd:ville-grombalia foaf:name "Grombalia" .
+
+sgd:ville-hammam-sousse foaf:name "Hammam Sousse" .
+
+sgd:ville-khezama-ouest foaf:name "Khezama Ouest" .
+
+sgd:ville-monastir foaf:name "Monastir" .
+
+sgd:ville-nabeul foaf:name "Nabeul" .
+
+sgd:ville-sfax foaf:name "Sfax" .
+
+sgd:ville-sokra foaf:name "Sokra" .
+
+sgd:competence-django a sg:Framework ;
+    foaf:name "Django" .
+
+sgd:competence-jenkins a sg:CloudDevOps ;
+    foaf:name "Jenkins" .
+
+sgd:competence-kubernetes a sg:CloudDevOps ;
+    foaf:name "Kubernetes" .
+
+sgd:competence-spark a sg:Framework ;
+    foaf:name "Spark" .
+
+sgd:competence-tensorflow a sg:Framework ;
+    foaf:name "TensorFlow" .
+
+sgd:entreprise-centre-canadien-de-services-dagents-virtuels foaf:name "Centre Canadien de Services d’Agents Virtuels" .
+
+sgd:entreprise-streamwide a sg:EntrepriseTech ;
+    foaf:name "Streamwide" .
+
+sgd:ville-zaghouan foaf:name "Zaghouan" .
+
+sgd:competence-laravel a sg:Framework ;
+    foaf:name "Laravel" .
+
+sgd:competence-mongodb a sg:BaseDeDonnees ;
+    foaf:name "MongoDB" .
+
+sgd:entreprise-bestlab a sg:EntrepriseTech ;
+    foaf:name "Bestlab" .
+
+sgd:ville-sousse foaf:name "Sousse" .
+
+sgd:competence-sqlserver a sg:BaseDeDonnees ;
+    foaf:name "SQL Server" .
+
+sgd:entreprise-databiz a sg:EntrepriseTech ;
+    foaf:name "Databiz" .
+
+sgd:entreprise-jk-technics a sg:EntrepriseTech ;
+    foaf:name "JK TECHNICS" .
+
+sgd:competence-angular a sg:Framework ;
+    foaf:name "Angular" .
+
+sgd:ville-ariana foaf:name "Ariana" .
+
+sgd:competence-csharp a sg:LangageProgrammation ;
+    foaf:name "C#" .
+
+sgd:competence-dotnet a sg:Framework ;
+    foaf:name ".NET" .
+
+sgd:competence-mysql a sg:BaseDeDonnees ;
+    foaf:name "MySQL" .
+
+sgd:competence-typescript a sg:LangageProgrammation ;
+    foaf:name "TypeScript" .
+
+sgd:competence-aws a sg:CloudDevOps ;
+    foaf:name "AWS" .
+
+sgd:competence-java a sg:LangageProgrammation ;
+    foaf:name "Java" .
+
+sgd:competence-postgresql a sg:BaseDeDonnees ;
+    foaf:name "PostgreSQL" .
+
+sgd:competence-nodejs a sg:Framework ;
+    foaf:name "Node.js" .
+
+sgd:competence-php a sg:LangageProgrammation ;
+    foaf:name "PHP" .
+
+sgd:competence-react a sg:Framework ;
+    foaf:name "React" .
+
+sgd:competence-docker a sg:CloudDevOps ;
+    foaf:name "Docker" .
+
+sgd:competence-azure a sg:CloudDevOps ;
+    foaf:name "Azure" .
+
+sgd:competence-linux a sg:CloudDevOps ;
+    foaf:name "Linux" .
+
+sgd:competence-javascript a sg:LangageProgrammation ;
+    foaf:name "JavaScript" .
+
+sgd:competence-git a sg:CloudDevOps ;
+    foaf:name "Git" .
+
+sgd:competence-python a sg:LangageProgrammation ;
+    foaf:name "Python" .
+
+sgd:competence-sql a sg:BaseDeDonnees ;
+    foaf:name "SQL" .
+
+sgd:ville-tunis foaf:name "Tunis" .
+

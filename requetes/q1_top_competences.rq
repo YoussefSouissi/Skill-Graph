@@ -1,0 +1,15 @@
+# Q1 · Compétences les plus demandées
+# Utilité : le service carrières voit ce que le marché demande ; un étudiant sait quoi apprendre en priorité.
+# Pour chaque compétence : nombre d'offres qui l'exigent (requise ou souhaitée, grâce à R2), du plus grand au plus petit.
+# Sans inférence : aucun résultat (aucun sg:exigeCompetence écrit dans les données).
+# Endpoint : /competences/top (le paramètre limite est appliqué en Python : LIMIT n'accepte pas de variable)
+PREFIX sg:   <http://skillgraph-tn.org/vocab#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?competence ?nom (COUNT(DISTINCT ?offre) AS ?nbOffres)
+WHERE {
+    ?offre sg:exigeCompetence ?competence .
+    ?competence foaf:name ?nom .
+}
+GROUP BY ?competence ?nom
+ORDER BY DESC(?nbOffres) ?nom

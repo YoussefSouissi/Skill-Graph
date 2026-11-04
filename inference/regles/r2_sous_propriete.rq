@@ -1,0 +1,11 @@
+# R2 (cours, partie « Inférence ») : si p(x,y) et p sous-propriété de q, alors q(x,y).
+# Exemple : sgd:offre-12 sg:competenceRequise sgd:competence-python
+#           + sg:competenceRequise rdfs:subPropertyOf sg:exigeCompetence
+#           => sgd:offre-12 sg:exigeCompetence sgd:competence-python
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT { ?x ?q ?y }
+WHERE {
+    ?x ?p ?y .
+    ?p rdfs:subPropertyOf ?q .
+}

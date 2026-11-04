@@ -1,0 +1,10 @@
+# Q0 · Nombre d'offres de type sg:Offre
+# Utilité : montrer l'inférence. Les offres sont écrites seulement sg:StagePFE, sg:Stage ou sg:Emploi,
+# donc 0 sans inférence (voulu) ; avec R1, chaque offre devient aussi une sg:Offre.
+# Endpoint : /statistiques/inference
+PREFIX sg: <http://skillgraph-tn.org/vocab#>
+
+SELECT (COUNT(DISTINCT ?offre) AS ?nbOffres)
+WHERE {
+    ?offre a sg:Offre .
+}

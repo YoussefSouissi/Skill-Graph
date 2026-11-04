@@ -1,0 +1,15 @@
+# Secrets
+.env
+
+# Assistant files
+.claude/
+CLAUDE.md
+
+# Python
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# System
+.DS_Store

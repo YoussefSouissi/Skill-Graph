@@ -1,0 +1,24 @@
+# Q2 · Offres filtrées par ville, compétence et type
+# Utilité : la recherche de l'étudiant (« les stages PFE à Tunis qui demandent Python »).
+# Paramètres (liés par initBindings, tous facultatifs : une variable non liée accepte toutes les valeurs) :
+#   ?ville      ex. sgd:ville-tunis
+#   ?competence ex. sgd:competence-python
+#   ?type       sg:StagePFE, sg:Stage ou sg:Emploi
+# Avec inférence : ?type = sg:Stage trouve aussi les StagePFE (R1) ; ?competence trouve les compétences
+# requises ET souhaitées (R2). Sans inférence : aucun sg:exigeCompetence, donc aucun résultat.
+# Endpoint : /offres
+PREFIX sg:      <http://skillgraph-tn.org/vocab#>
+PREFIX foaf:    <http://xmlns.com/foaf/0.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+SELECT DISTINCT ?offre ?titre ?entreprise ?nomVille
+WHERE {
+    ?offre a ?type ;
+           dcterms:title ?titre ;
+           sg:situeeA ?ville ;
+           sg:publieePar ?e ;
+           sg:exigeCompetence ?competence .
+    ?ville foaf:name ?nomVille .
+    ?e foaf:name ?entreprise .
+}
+ORDER BY ?titre

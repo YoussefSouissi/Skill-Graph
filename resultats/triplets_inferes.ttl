@@ -1,0 +1,454 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <https://schema.org/> .
+@prefix sg: <http://skillgraph-tn.org/vocab#> .
+@prefix sgd: <http://skillgraph-tn.org/donnees/> .
+
+sgd:candidat-maissa a foaf:Person .
+
+sgd:candidat-mohamed-amine a foaf:Person .
+
+sgd:candidat-yasmine a foaf:Person .
+
+sgd:candidat-youssef a foaf:Person .
+
+sgd:entreprise-bestlab a sg:Entreprise,
+        foaf:Organization .
+
+sgd:entreprise-databiz a sg:Entreprise,
+        foaf:Organization .
+
+sgd:entreprise-jk-technics a sg:Entreprise,
+        foaf:Organization .
+
+sgd:entreprise-streamwide a sg:Entreprise,
+        foaf:Organization .
+
+sgd:offre-kj-247915 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-sql,
+        sgd:competence-sqlserver .
+
+sgd:offre-kj-247932 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-csharp,
+        sgd:competence-dotnet,
+        sgd:competence-git,
+        sgd:competence-javascript,
+        sgd:competence-sql,
+        sgd:competence-sqlserver .
+
+sgd:offre-kj-247979 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-javascript,
+        sgd:competence-mysql,
+        sgd:competence-nodejs,
+        sgd:competence-php,
+        sgd:competence-postgresql .
+
+sgd:offre-kj-247985 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-sql .
+
+sgd:offre-kj-248558 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-cpp,
+        sgd:competence-linux,
+        sgd:competence-python .
+
+sgd:offre-kj-248599 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-sql .
+
+sgd:offre-kj-248648 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-azure,
+        sgd:competence-linux,
+        sgd:competence-oracle,
+        sgd:competence-sql,
+        sgd:competence-sqlserver .
+
+sgd:offre-kj-249099 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-docker,
+        sgd:competence-linux .
+
+sgd:offre-kj-249198 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-django,
+        sgd:competence-docker,
+        sgd:competence-fastapi,
+        sgd:competence-flask,
+        sgd:competence-git,
+        sgd:competence-linux,
+        sgd:competence-python,
+        sgd:competence-sql .
+
+sgd:offre-kj-249199 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-angular,
+        sgd:competence-java,
+        sgd:competence-nodejs,
+        sgd:competence-php,
+        sgd:competence-python,
+        sgd:competence-react,
+        sgd:competence-sql .
+
+sgd:offre-kj-249241 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-aws,
+        sgd:competence-azure,
+        sgd:competence-git,
+        sgd:competence-typescript .
+
+sgd:offre-kj-249243 a sg:Offre,
+        sg:Stage,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-angular,
+        sgd:competence-django,
+        sgd:competence-javascript,
+        sgd:competence-nodejs,
+        sgd:competence-react,
+        sgd:competence-spring,
+        sgd:competence-sql .
+
+sgd:offre-kj-249246 a sg:Offre,
+        sg:Stage,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-python,
+        sgd:competence-pytorch,
+        sgd:competence-tensorflow .
+
+sgd:offre-kj-249276 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-angular,
+        sgd:competence-azure,
+        sgd:competence-csharp,
+        sgd:competence-dotnet,
+        sgd:competence-git,
+        sgd:competence-java,
+        sgd:competence-javascript,
+        sgd:competence-laravel,
+        sgd:competence-nodejs,
+        sgd:competence-php,
+        sgd:competence-python,
+        sgd:competence-react,
+        sgd:competence-sql .
+
+sgd:offre-tj-2000309 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-linux,
+        sgd:competence-python .
+
+sgd:offre-tj-2025593 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-docker,
+        sgd:competence-git,
+        sgd:competence-javascript,
+        sgd:competence-postgresql,
+        sgd:competence-python .
+
+sgd:offre-tj-2036516 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-aws,
+        sgd:competence-azure,
+        sgd:competence-docker,
+        sgd:competence-git,
+        sgd:competence-java,
+        sgd:competence-kubernetes,
+        sgd:competence-linux,
+        sgd:competence-mongodb,
+        sgd:competence-mysql,
+        sgd:competence-postgresql,
+        sgd:competence-python,
+        sgd:competence-spark,
+        sgd:competence-sql .
+
+sgd:offre-tj-2037780 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-git,
+        sgd:competence-java,
+        sgd:competence-jenkins .
+
+sgd:offre-tj-2038142 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-azure,
+        sgd:competence-linux .
+
+sgd:offre-tj-2040776 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-linux,
+        sgd:competence-php .
+
+sgd:offre-tj-2043356 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-linux .
+
+sgd:offre-tj-2052321 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-java,
+        sgd:competence-laravel,
+        sgd:competence-php .
+
+sgd:offre-tj-2062380 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-docker,
+        sgd:competence-mongodb,
+        sgd:competence-mysql,
+        sgd:competence-postgresql,
+        sgd:competence-python,
+        sgd:competence-sql,
+        sgd:competence-tensorflow .
+
+sgd:offre-tj-2062632 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-git,
+        sgd:competence-javascript,
+        sgd:competence-python,
+        sgd:competence-typescript .
+
+sgd:offre-tj-2062816 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-csharp,
+        sgd:competence-dotnet,
+        sgd:competence-git,
+        sgd:competence-sql .
+
+sgd:offre-tj-2063000 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-javascript,
+        sgd:competence-python,
+        sgd:competence-sql .
+
+sgd:offre-tj-2063120 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-docker,
+        sgd:competence-kubernetes,
+        sgd:competence-linux,
+        sgd:competence-mongodb,
+        sgd:competence-nodejs,
+        sgd:competence-react,
+        sgd:competence-typescript .
+
+sgd:offre-tj-2064027 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-csharp,
+        sgd:competence-dotnet,
+        sgd:competence-javascript,
+        sgd:competence-sql .
+
+sgd:offre-tj-2064457 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-git,
+        sgd:competence-mysql,
+        sgd:competence-nodejs,
+        sgd:competence-sql,
+        sgd:competence-typescript .
+
+sgd:offre-tj-2064507 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-linux .
+
+sgd:offre-tj-2065442 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-azure .
+
+sgd:offre-tj-2065770 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-sql .
+
+sgd:offre-tj-2065918 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-azure .
+
+sgd:offre-tj-2066027 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-aws,
+        sgd:competence-python .
+
+sgd:offre-tj-2066213 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-python .
+
+sgd:offre-tj-2066216 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-aws,
+        sgd:competence-azure,
+        sgd:competence-docker,
+        sgd:competence-git,
+        sgd:competence-python,
+        sgd:competence-spark,
+        sgd:competence-sql .
+
+sgd:offre-tj-2066221 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-aws,
+        sgd:competence-azure,
+        sgd:competence-docker,
+        sgd:competence-jenkins .
+
+sgd:offre-tj-2066325 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-csharp,
+        sgd:competence-dotnet,
+        sgd:competence-javascript,
+        sgd:competence-mysql,
+        sgd:competence-nodejs,
+        sgd:competence-postgresql,
+        sgd:competence-react,
+        sgd:competence-sql,
+        sgd:competence-sqlserver,
+        sgd:competence-typescript .
+
+sgd:offre-tj-2066378 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-csharp,
+        sgd:competence-dotnet,
+        sgd:competence-java,
+        sgd:competence-php,
+        sgd:competence-python,
+        sgd:competence-sql .
+
+sgd:offre-tj-2066395 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-angular,
+        sgd:competence-java,
+        sgd:competence-nodejs,
+        sgd:competence-php,
+        sgd:competence-python,
+        sgd:competence-react .
+
+sgd:offre-tj-2066492 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-git,
+        sgd:competence-javascript,
+        sgd:competence-react .
+
+sgd:offre-tj-2066898 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-aws,
+        sgd:competence-postgresql,
+        sgd:competence-sql .
+
+sgd:offre-tj-2067025 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-git,
+        sgd:competence-javascript,
+        sgd:competence-nodejs,
+        sgd:competence-python,
+        sgd:competence-react,
+        sgd:competence-sql,
+        sgd:competence-typescript .
+
+sgd:offre-tj-2067087 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-angular,
+        sgd:competence-aws,
+        sgd:competence-azure,
+        sgd:competence-docker,
+        sgd:competence-git,
+        sgd:competence-javascript,
+        sgd:competence-laravel,
+        sgd:competence-linux,
+        sgd:competence-mysql,
+        sgd:competence-php,
+        sgd:competence-postgresql,
+        sgd:competence-react .
+
+sgd:offre-tj-2067167 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-docker,
+        sgd:competence-git,
+        sgd:competence-linux .
+
+sgd:offre-tj-2067764 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-java,
+        sgd:competence-javascript,
+        sgd:competence-python,
+        sgd:competence-sql .
+
+sgd:offre-tj-2067873 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-php .
+
+sgd:offre-tj-2067975 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-git,
+        sgd:competence-postgresql,
+        sgd:competence-python .
+
+sgd:offre-tj-2068070 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-git,
+        sgd:competence-javascript .
+
+sgd:offre-tj-2068548 a sg:Offre,
+        schema:JobPosting ;
+    sg:exigeCompetence sgd:competence-aws,
+        sgd:competence-azure,
+        sgd:competence-python .
+
+sgd:competence-cpp a sg:Competence .
+
+sgd:competence-fastapi a sg:Competence .
+
+sgd:competence-flask a sg:Competence .
+
+sgd:competence-oracle a sg:Competence .
+
+sgd:competence-pytorch a sg:Competence .
+
+sgd:competence-spring a sg:Competence .
+
+sgd:competence-django a sg:Competence .
+
+sgd:competence-jenkins a sg:Competence .
+
+sgd:competence-kubernetes a sg:Competence .
+
+sgd:competence-spark a sg:Competence .
+
+sgd:competence-tensorflow a sg:Competence .
+
+sgd:competence-laravel a sg:Competence .
+
+sgd:competence-mongodb a sg:Competence .
+
+sgd:competence-sqlserver a sg:Competence .
+
+sgd:competence-angular a sg:Competence .
+
+sgd:competence-csharp a sg:Competence .
+
+sgd:competence-dotnet a sg:Competence .
+
+sgd:competence-mysql a sg:Competence .
+
+sgd:competence-typescript a sg:Competence .
+
+sgd:competence-aws a sg:Competence .
+
+sgd:competence-java a sg:Competence .
+
+sgd:competence-postgresql a sg:Competence .
+
+sgd:competence-nodejs a sg:Competence .
+
+sgd:competence-php a sg:Competence .
+
+sgd:competence-react a sg:Competence .
+
+sgd:competence-docker a sg:Competence .
+
+sgd:competence-azure a sg:Competence .
+
+sgd:competence-linux a sg:Competence .
+
+sgd:competence-javascript a sg:Competence .
+
+sgd:competence-git a sg:Competence .
+
+sgd:competence-python a sg:Competence .
+
+sgd:competence-sql a sg:Competence .
+
